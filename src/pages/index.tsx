@@ -30,7 +30,7 @@ export default function Home({ projects }:{projects:Project[]}) {
         process.env.NEXT_EMAIL_SERVICE||"service_9wr4st9",
         "template_9bxgq3t",
         e.target,
-        process.env.NEXT_EMAIL_SECRET
+        process.env.NEXT_EMAIL_SECRET||"kEDU61bozJ8RGniyY"
       )
       .then(
         (result: any) => {
