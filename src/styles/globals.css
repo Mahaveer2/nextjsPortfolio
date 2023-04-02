@@ -139,7 +139,6 @@ a {
 }
 
 .card {
-  background: var(--bg);
   border-radius: 10px;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -399,3 +398,10 @@ i {
   gap: 20px;
   flex-direction: column;
 }
+
+
+/* .glow {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2d6bfb, 0 0 70px #00b3ff, 0 0 80px #00153c, 0 0 100px #0033ff, 0 0 150px #0037ff;
+} */

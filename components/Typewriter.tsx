@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Typewriter = ({ text }) => {
+const Typewriter = ({ text }:{text:string}) => {
   const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {

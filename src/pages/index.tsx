@@ -21,7 +21,7 @@ function sendEmail(e: any) {
   e.preventDefault();
   emailjs
     .sendForm(
-      process.env.NEXT_EMAIL_SERVICE,
+      process.env.NEXT_EMAIL_SERVICE||"",
       "template_9bxgq3t",
       e.target,
       process.env.NEXT_EMAIL_SECRET
@@ -39,7 +39,7 @@ function sendEmail(e: any) {
 }
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ projects }) {
+export default function Home({ projects }:{projects:Project[]}) {
   return (
     <>
       <Head>
@@ -60,10 +60,10 @@ export default function Home({ projects }) {
       </Head>
       <Blob />
       <main className={styles.main}>
-        <Parallax intensity={-0.2}>
+        <Parallax intensity={-0.3}>
           <div className="h-[100vh] flex justify-center items-center flex-col ">
             <h1
-              className="text-4xl md:text-7xl text-center mb-6"
+              className="text-4xl md:text-7xl text-center mb-6 glow"
               style={{ fontFamily: "Oracle" }}
             >
               <Typewriter text="Mahaveer Amrani" />
@@ -77,6 +77,7 @@ export default function Home({ projects }) {
             </article>
           </div>
         </Parallax>
+        <Parallax intensity={0.04}>
         <div className="w-[80%] mx-auto mb-[200px]">
           <h1 className="text-3xl" style={{ fontFamily: "Oracle" }}>
             Skills
@@ -114,10 +115,9 @@ export default function Home({ projects }) {
             </div>
           </div>
         </div>
-        <Parallax intensity={-0.1}>
-          <Project projects={projects} />
         </Parallax>
-        <div className="w-[80%] mx-auto ">
+          <Project projects={projects} />
+        <div className="w-[80%] mx-auto mt-[80px]">
           <h1 className="text-3xl" style={{ fontFamily: "Oracle" }}>
             Contact
           </h1>
@@ -152,7 +152,7 @@ export default function Home({ projects }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context:any) {
   const projects = await getProjects();
   return {
     props: {

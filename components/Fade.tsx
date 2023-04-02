@@ -1,12 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef,ReactNode } from 'react';
 
-function Fade(props) {
+interface Props {
+  children?: ReactNode
+}
+
+function Fade({children}:Props) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const top = ref.current.getBoundingClientRect().top;
+      const top = ref?.current?.getBoundingClientRect().top || 0;
       const windowHeight = window.innerHeight;
 
       if (top < windowHeight *0.7) {
@@ -26,7 +30,7 @@ function Fade(props) {
       ref={ref}
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
     >
-      {props.children}
+      {children}
     </div>
   );
 }

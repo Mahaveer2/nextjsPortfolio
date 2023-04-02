@@ -1,15 +1,16 @@
 import React, {  ReactElement } from 'react';
-import { FaDuotone, FaSolid, FaBrands } from 'react-icons/fa';
 import Fade from '../Fade';
  
 interface Card{
   title:string;
   description:string;
+  image:string;
+  link:string;
 }
 
 function Card({ title,image,link, description }:Card) {
   return (
-    <a href={link} style={{"--bg": `url(${image})`}} className="card">
+    <a href={link} style={{background: `url(${image})`}} className="card">
       <div className="card-content">
         <div className="card-image">
         </div>
@@ -26,10 +27,10 @@ function Card({ title,image,link, description }:Card) {
   );
 }
 
-const Project = ({projects}:any) => {
+const Project = ({projects}:{projects:Project[]}) => {
 
-  const onMouseMove = (e) => {
-    const cards = document.getElementsByClassName("card");
+  const onMouseMove = (e:any) => {
+    const cards:any = document.getElementsByClassName("card");
     for (const card of cards) {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
