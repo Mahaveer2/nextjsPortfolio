@@ -144,7 +144,7 @@ export default function Home({ projects }:{projects:Project[]}) {
             />
             <textarea
               className="input"
-              name="password"
+              name="message"
               placeholder="Enter your message"
             />
             <button type="submit" className="link">
