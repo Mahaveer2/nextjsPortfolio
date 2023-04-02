@@ -1,9 +1,6 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  background: rgba(0, 0, 0,.2);
+  backdrop-filter: blur(150px);
   min-height: 100vh;
 }
 
@@ -232,7 +229,6 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
-    backdrop-filter: blur(24px);
   }
 
   .description div {
