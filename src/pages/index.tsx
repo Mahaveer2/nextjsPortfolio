@@ -133,18 +133,21 @@ export default function Home({ projects }:{projects:Project[]}) {
             <input
               className="input"
               type="text"
+              required
               name="name"
               placeholder="Enter your name"
             />
             <input
               className="input"
               type="email"
+              required
               name="email"
               placeholder="Enter your email"
             />
             <textarea
               className="input"
               name="message"
+              required
               placeholder="Enter your message"
             />
             <button type="submit" className="link">
