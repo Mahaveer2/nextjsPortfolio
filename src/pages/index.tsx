@@ -52,9 +52,9 @@ export default function Home({ projects }:{projects:Project[]}) {
         <title>Mahaveer Amrani</title>
         <meta
           name="description"
-          content="I am a web developer with 4 years of experience. My expertise includes using React, Node.js, MySQL, PHP, C# and Svelte to build responsive and dynamic web applications. I am dedicated to staying up-to-date with the latest web development trends and technologies to deliver high-quality and efficient solutions to my clients."
+          content="I am an experienced web developer with a passion for building dynamic, responsive web applications. My skills include expertise in React, Node.js, MySQL, and Svelte, and I stay on top of the latest web development trends to deliver cutting-edge solutions to my clients."
         />
-        
+        <meta name="msvalidate.01" content="CEBFB380C8F6675127356EB2BD2B353A" />
         <meta property="og:image" content="/mahaveer.jpeg"></meta>
         <meta property="og:image:width" content="1200"></meta>
         <meta name="google-site-verification" content="sIb_6pn3SEuVd-r3vJnNpuHXaq4l7FVxU_5I35LE5_k" />
