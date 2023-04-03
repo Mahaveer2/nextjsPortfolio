@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import styles from "./blob.module.css";
 
 const Blob = () => {
   const [position, setPosition] = useState({ x: 700, y: 300 });
+  const [click,setClick] = useState(false);
+  const className = `blob`;
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -18,6 +19,10 @@ const Blob = () => {
 
     // Add the event listener on mount
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("click",() => {
+      setClick(true);
+      setTimeout(() => setClick(false),500)
+    })
 
     // Remove the event listener on unmount
     return () => window.removeEventListener("mousemove", handleMouseMove);
@@ -26,9 +31,9 @@ const Blob = () => {
   return (
     <div
       style={{
-        transform: `translate(${position.x - 200}px, ${position.y - 200}px)`,
+        transform: `${click ? "scale(1.2)" : "scale(1)"} translate(${position.x - 200}px, ${position.y - 200}px)`,
       }}
-      className={styles.blob}
+      className={className}
     ></div>
   );
 };
