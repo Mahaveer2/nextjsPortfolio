@@ -31,7 +31,7 @@ const Blob = () => {
   return (
     <div
       style={{
-        transform: `${click ? "scale(1.2)" : "scale(1)"} translate(${position.x - 200}px, ${position.y - 200}px)`,
+        transform: `${click ? "scale(0.8)" : "scale(1)"} translate(${position.x - 200}px, ${position.y - 200}px)`,
       }}
       className={className}
     ></div>

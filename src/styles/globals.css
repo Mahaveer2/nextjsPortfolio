@@ -413,7 +413,7 @@ i {
   height: 400px;
   position: absolute !important;
   border-radius: 50%;
-  transition: .2s ease-in;
+  transition: .2s ease;
 }
 
 .blob.active{
