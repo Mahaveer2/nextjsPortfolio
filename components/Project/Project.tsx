@@ -10,19 +10,20 @@ interface Card{
 
 function Card({ title,image,link, description }:Card) {
   return (
-    <a href={link} style={{background: `url(${image})`}} className="card">
-      <div className="card-content">
+    <a href={link} aria-details={description} className="card overflow-hidden">
+      <img className="w-full h-full rounded-xl object-cover p-[1px]" src={image} alt={description}/>
+      <article className="card-content">
         <div className="card-image">
         </div>
         <div className="card-info-wrapper">
           <div className="card-info">
             <div className="card-info-title">
-              <h3>{title}</h3>
-              <h4>{description}</h4>
+              <h2>{title}</h2>
+              <p>{description}</p>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </a>
   );
 }
