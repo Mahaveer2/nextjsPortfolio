@@ -28,7 +28,7 @@ const Blob = () => {
   }, []);
 
   return (
-    <div className="h-full absolute overflow-hidden w-full">
+    <div className="h-full z-[-2] absolute overflow-hidden w-full blob-wrapper">
       <div
       style={{
         transform: `${click ? "scale(1.3)" : "scale(1)"} translate(${position.x - (click ? 350:200)}px, ${position.y - (click ? 350:200)}px)`,
