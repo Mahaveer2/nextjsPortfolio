@@ -8,7 +8,7 @@ import Project from "../../components/Project/Project";
 import Parallax from "../../components/Parallax";
 import emailjs from "@emailjs/browser";
 import client from "@/hooks/sanity";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 let message = "";
 
 async function getProjects() {
@@ -44,7 +44,14 @@ export default function Home({ projects }:{projects:Project[]}) {
       );
   }
 
+  const [windowAvailable,setWindow] = useState(false);
   const [loading,setLoading] = useState(false);
+
+  useEffect(() => {
+    if(window){
+      setWindow(true);
+    }
+  },[])
 
   return (
     <>

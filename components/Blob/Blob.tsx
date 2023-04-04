@@ -11,11 +11,10 @@ const Blob = () => {
       const newX = e.pageX; // subtract half of the follower's width to center it on the cursor
       const newY = e.pageY; // subtract half of the follower's height to center it on the cursor
 
-      if(newY > window.innerHeight + 1700) return false;
-
       // Update the position state
       setPosition({ x: newX, y: newY });
     };
+
 
     // Add the event listener on mount
     window.addEventListener("mousemove", handleMouseMove);
@@ -29,12 +28,14 @@ const Blob = () => {
   }, []);
 
   return (
-    <div
+    <div className="h-full absolute overflow-hidden w-full">
+      <div
       style={{
-        transform: `${click ? "scale(0.8)" : "scale(1)"} translate(${position.x - 200}px, ${position.y - 200}px)`,
+        transform: `${click ? "scale(1.3)" : "scale(1)"} translate(${position.x - (click ? 350:200)}px, ${position.y - (click ? 350:200)}px)`,
       }}
       className={className}
     ></div>
+    </div>
   );
 };
 
