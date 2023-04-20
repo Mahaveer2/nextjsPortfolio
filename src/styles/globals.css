@@ -426,7 +426,7 @@ i {
     transform:rotate(0deg);
   }
   50%{
-    transform:scale(1.2,0.8);
+    transform:scale(2,0.5);
   }
   to{
         transform:rotate(360deg);
