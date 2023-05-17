@@ -418,15 +418,15 @@ i {
   position: absolute !important;
   border-radius: 50%;
   transition: .2s ease;
-  animation:rotate 20s infinite;
+  animation:rotateAnim 15s infinite;
 }
 
-@keyframes rotate{
+@keyframes rotateAnim{
   from{
     transform:rotate(0deg);
   }
   50%{
-    transform:scale(2,0.5);
+    transform:scale(3,0.3);
   }
   to{
         transform:rotate(360deg);
