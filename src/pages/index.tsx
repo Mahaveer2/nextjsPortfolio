@@ -85,7 +85,7 @@ export default function Home({ projects }:{projects:Project[]}) {
             </h1>
             <article className="w-[80%] text-center">
               I am a web developer with 4 years of experience. My expertise
-              includes using React, Node.js, MySQL, PHP, C# and Svelte to build
+              includes using React, Node.js, MySQL,Nextjs and Svelte to build
               responsive and dynamic web applications. I am dedicated to staying
               up-to-date with the latest web development trends and technologies
               to deliver high-quality and efficient solutions to my clients.
