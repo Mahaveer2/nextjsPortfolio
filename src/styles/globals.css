@@ -412,15 +412,12 @@ i {
 
 
 .blob{
-  background: #fc00ff;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   width: 400px;
   height: 400px;
   position: absolute !important;
   border-radius: 50%;
-  transition: .2s ease;
-  animation:rotateAnim 15s infinite;
+  transition: .2s ease-in-out;
 }
 
 @keyframes rotateAnim{
