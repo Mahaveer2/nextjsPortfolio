@@ -412,12 +412,12 @@ i {
 
 
 .blob{
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background: radial-gradient(circle at 4.3% 10.7%, rgb(138, 118, 249) 13.6%, rgb(75, 252, 235) 100.7%);
   width: 400px;
   height: 400px;
   position: absolute !important;
   border-radius: 50%;
-  transition: .2s ease-in-out;
+  transition: 50 ease-in-out;
 }
 
 @keyframes rotateAnim{
